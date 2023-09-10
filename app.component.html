@@ -1,0 +1,26 @@
+<h2>Forms in Angular</h2>
+
+<br/>
+Latest Request: <br/>
+Author: {{author}}
+Books: {{result_titles}}
+
+<hr/>
+
+Want a new book to read? Enter an author you like and the number
+of books you want for some recommendations!
+
+
+<br/>
+<form [formGroup]="booksFormGroup" (ngSubmit)="getBooks()">
+  Author: <input  formControlName="formAuthor"> : {{author}}<br/>
+  <br/>
+  <button type="submit">Submit</button>
+</form>
+<br/>
+
+
+{{booksFormGroup | json}}
+<br/>
+
+
